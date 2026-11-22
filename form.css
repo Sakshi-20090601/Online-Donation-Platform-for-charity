@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f1;
+    color: #20352c;
+}
+
+.topbar {
+    min-height: 76px;
+    padding: 14px 7%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6ebe4;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #173f32;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.brand-mark {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #d9edc9;
+    color: #24563b;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a,
+.login-link {
+    color: #718077;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active,
+.login-link:hover {
+    color: #286345;
+}
+
+.login-link {
+    padding: 10px 14px;
+    border: 1px solid #286345;
+    border-radius: 8px;
+    color: #286345;
+    font-weight: bold;
+}
+
+.form-layout {
+    width: 88%;
+    max-width: 1100px;
+    margin: 55px auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.form-intro {
+    padding-top: 40px;
+}
+
+.eyebrow {
+    color: #67915e;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.7px;
+    margin-bottom: 13px;
+}
+
+.form-intro h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.form-intro > p:not(.eyebrow) {
+    color: #718077;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.impact-box {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 35px;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: #e9f1e4;
+}
+
+.impact-symbol {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #3d7848;
+    border-radius: 50%;
+    font-size: 23px;
+}
+
+.impact-box strong,
+.impact-box small {
+    display: block;
+}
+
+.impact-box strong {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.impact-box small {
+    color: #758479;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #39744e;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-card {
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #e6ebe4;
+    border-radius: 15px;
+}
+
+.form-card h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: #829087;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 16px 0 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d8e0d8;
+    border-radius: 8px;
+    background-color: white;
+    color: #20352c;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #548b5b;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.check-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #65766a;
+}
+
+.check-row input {
+    width: auto;
+}
+
+.check-row span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.primary-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 17px;
+    margin-top: 22px;
+    background-color: #286345;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #1c4d34;
+}
+
+.message {
+    min-height: 18px;
+    margin-top: 12px;
+    color: #39744e;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 800px) {
+    .form-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 30px auto;
+    }
+
+    .form-intro {
+        padding-top: 0;
+    }
+
+    .form-intro h1 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .topbar {
+        flex-wrap: wrap;
+        gap: 13px;
+        padding: 14px 5%;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-layout {
+        width: 92%;
+    }
+
+    .form-card {
+        padding: 21px;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+
+.site-footer {
+    padding: 24px 7%;
+    margin-top: 35px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e6ebe4;
+}
+
+.site-footer p {
+    color: #829087;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 550px) {
+    .site-footer {
+        display: block;
+        text-align: center;
+    }
+
+    .site-footer p {
+        margin-top: 10px;
+    }
+}
+
+
+[hidden] {
+    display: none !important;
+}
+
+.confirmation-layout {
+    width: 90%;
+    max-width: 650px;
+    margin: 55px auto;
+}
+
+.confirmation-card {
+    padding: 38px;
+    background-color: white;
+    border: 1px solid #e6ebe4;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e5f2df;
+    color: #286345;
+    font-size: 30px;
+}
+
+.confirmation-card h1 {
+    color: #173f32;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.confirmation-text {
+    color: #718077;
+    font-size: 14px;
+}
+
+.receipt-details {
+    margin: 28px 0 18px;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: #f5f7f1;
+    text-align: left;
+}
+
+.receipt-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e9df;
+    font-size: 13px;
+}
+
+.receipt-details div:last-child {
+    border-bottom: none;
+}
+
+.receipt-details span {
+    color: #718077;
+}
+
+.receipt-details strong {
+    color: #20352c;
+    text-align: right;
+}
+
+.receipt-details .received-status {
+    color: #286345;
+}
+
+.receipt-note {
+    color: #829087;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.confirmation-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.confirmation-buttons a,
+.secondary-button {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondary-button {
+    padding: 14px 17px;
+    border: 1px solid #286345;
+    border-radius: 8px;
+    background: white;
+    color: #286345;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: #edf4e8;
+}
+
+@media screen and (max-width: 550px) {
+    .confirmation-card {
+        padding: 25px 18px;
+    }
+
+    .confirmation-card h1 {
+        font-size: 24px;
+    }
+
+    .confirmation-buttons {
+        flex-direction: column;
+    }
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #39744e;
+    font-size: 13px;
+}
+
+.user-area a {
+    text-decoration: none;
+}
+
+/* Additional donation form fields */
+.form-section-title {
+    margin-top: 23px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #e8eee6;
+    color: #286345;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .3px;
+}
+
+.choice-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.choice-card {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px;
+    margin: 0;
+    border: 1px solid #d8e0d8;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #53665a;
+}
+
+.choice-card input {
+    width: auto;
+    accent-color: #286345;
+}
+
+.choice-card span {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.amount-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.amount-button {
+    padding: 10px 5px;
+    border: 1px solid #cdddcf;
+    border-radius: 8px;
+    background: #f7faf5;
+    color: #286345;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.amount-button:hover,
+.amount-button.selected {
+    background: #286345;
+    border-color: #286345;
+    color: white;
+}
+
+.receipt-details {
+    max-height: 430px;
+    overflow-y: auto;
+}
+
+.receipt-note {
+    color: #718077;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 550px) {
+    .field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .amount-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Required field indicator */
+.required-mark {
+    color: #c43d3d;
+    font-weight: bold;
+}

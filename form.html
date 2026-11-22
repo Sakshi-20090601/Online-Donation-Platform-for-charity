@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CharityConnect | Donate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="dashboard.html"><span class="brand-mark">C</span> CharityConnect</a>
+        <nav>
+            <a href="dashboard.html">Home</a>
+            <a class="active" href="form.html">Donate</a>
+        </nav>
+        <div class="user-area">
+            <a class="login-link" href="auth.html">Login / Register</a>
+        </div>
+    </header>
+
+    <main class="form-layout">
+        <section class="form-intro">
+            <p class="eyebrow">GIVE WITH PURPOSE</p>
+            <h1>Every contribution<br>starts a story.</h1>
+            <p>Your support can help provide education, healthcare, food and a safer environment. Choose a cause and share your contribution.</p>
+            <div class="impact-box">
+                <span class="impact-symbol">♡</span>
+                <div><strong>Every amount matters</strong><small>Small contributions can create meaningful change when we act together.</small></div>
+            </div>
+            <a href="dashboard.html" class="back-link">← Back to home</a>
+        </section>
+
+        <section class="form-card">
+            <p class="eyebrow">DONATION DETAILS</p>
+            <h2>Make a donation</h2>
+            <p class="form-subtitle">Fill in the details below to share your support.</p>
+            <form id="donationForm">
+                <div class="form-section-title">Personal information</div>
+                <div class="field-row">
+                    <div>
+                        <label for="donorName">Full name <span class="required-mark">*</span></label>
+                        <input type="text" id="donorName" placeholder="Enter your name" required>
+                    </div>
+                    <div>
+                        <label for="donorPhone">Phone number <span class="required-mark">*</span></label>
+                        <input type="tel" id="donorPhone" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" maxlength="10" required>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div>
+                        <label for="donorEmail">Email address <span class="required-mark">*</span></label>
+                        <input type="email" id="donorEmail" placeholder="you@example.com" required>
+                    </div>
+                    <div>
+                        <label for="donorCity">City <span class="required-mark">*</span></label>
+                        <input type="text" id="donorCity" placeholder="Your city" required>
+                    </div>
+                </div>
+
+                <div class="form-section-title">Donation details</div>
+                <label for="donationAmount">Donation amount (₹) <span class="required-mark">*</span></label>
+                <div class="amount-options">
+                    <button type="button" class="amount-button" data-amount="100">₹100</button>
+                    <button type="button" class="amount-button" data-amount="500">₹500</button>
+                    <button type="button" class="amount-button" data-amount="1000">₹1,000</button>
+                    <button type="button" class="amount-button" data-amount="2000">₹2,000</button>
+                </div>
+                <input type="number" id="donationAmount" placeholder="Enter another amount" min="1" step="1" required>
+
+                <label for="donationCause">Choose a cause <span class="required-mark">*</span></label>
+                <select id="donationCause" required>
+                    <option value="">Select cause</option>
+                    <option>Education</option>
+                    <option>Health &amp; Care</option>
+                    <option>Food &amp; Shelter</option>
+                    <option>Environment</option>
+                </select>
+
+                <label for="paymentMethod">Preferred payment method <span class="required-mark">*</span></label>
+                <select id="paymentMethod" required>
+                    <option value="">Select payment method</option>
+                    <option>UPI</option>
+                    <option>Debit / Credit Card</option>
+                    <option>Net Banking</option>
+                    <option>Bank Transfer</option>
+                </select>
+
+                <label for="donationMessage">Message (optional)</label>
+                <textarea id="donationMessage" rows="3" placeholder="Write a short message..."></textarea>
+
+                <label class="check-row"><input type="checkbox" id="anonymousDonation"> <span>Keep my name anonymous</span></label>
+                <label class="check-row"><input type="checkbox" id="confirmDonation" required> <span>I confirm that these details are correct. <span class="required-mark">*</span></span></label>
+                <button type="submit" class="primary-button">Submit donation <span>→</span></button>
+                <p id="formMessage" class="message"></p>
+            </form>
+        </section>
+    </main>
+
+    <main id="donationConfirmation" class="confirmation-layout" hidden>
+        <section class="confirmation-card">
+            <div class="success-icon">✓</div>
+            <p class="eyebrow">DONATION CONFIRMATION</p>
+            <h1>Thank you for your kindness!</h1>
+            <p class="confirmation-text">Your donation details have been successfully recorded.</p>
+            <div class="receipt-details">
+                <div><span>Reference number</span><strong id="receiptId"></strong></div>
+                <div><span>Donor</span><strong id="receiptName"></strong></div>
+                <div><span>Phone</span><strong id="receiptPhone"></strong></div>
+                <div><span>City</span><strong id="receiptCity"></strong></div>
+                <div><span>Cause</span><strong id="receiptCause"></strong></div>
+                <div><span>Amount</span><strong id="receiptAmount"></strong></div>
+                <div><span>Payment preference</span><strong id="receiptPayment"></strong></div>
+                <div><span>Status</span><strong class="received-status">Details submitted</strong></div>
+            </div>
+            <p class="receipt-note">Thank you for supporting this cause. Our team will contact you regarding the next steps for your contribution.</p>
+            <div class="confirmation-buttons">
+                <a href="dashboard.html" class="primary-button">Back to home</a>
+                <button type="button" id="donateAgain" class="secondary-button">Make another donation</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="dashboard.html"><span class="brand-mark">C</span> CharityConnect</a>
+        <p>Making kindness easier to share.</p>
+    </footer>
+</body>
+</html>
